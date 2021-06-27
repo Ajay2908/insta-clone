@@ -19,7 +19,8 @@ function getModalStyle() {
 const useStyles = makeStyles( ( theme ) => ( {
   paper: {
     position: 'absolute',
-    width: 400,
+    width: '60%',
+    maxWidth:400,
     backgroundColor: theme.palette.background.paper,
     border: '2px solid #000',
     boxShadow: theme.shadows[ 5 ],
@@ -194,7 +195,7 @@ function App() {
       {
         posts.map( ( { id, post } ) => {
           const { username, caption, imageUrl } = post;
-          return <Post key={ id } user={ user }postId = {id} username={ username } caption={ caption } imageUrl={ imageUrl } />
+          return <Post key={ id } user = {user}postId = {id} username={ username } caption={ caption } imageUrl={ imageUrl } />
         } )
       }
       { user?.displayName ?
