@@ -175,6 +175,7 @@ function App() {
         <img className="app__headerImage" alt=""
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
         />
+        { user ? <></>: <h4 style={ { lineHeight: '2em' } }>Please sign in to like, comment and post</h4>}
         { user ? (
           <div className="navbar__container">
             <Avatar className="post__avatar"
@@ -187,6 +188,7 @@ function App() {
         ) :
           (
             <div className="navbar__container">
+              
               <Button onClick={ () => setOpen( true ) } className="login__container__signup" >Sign Up</Button>
               <Button onClick={ () => setOpenSignIn( true ) } >Sign In</Button>
             </div>

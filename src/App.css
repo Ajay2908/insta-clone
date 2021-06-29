@@ -3,6 +3,7 @@
 }
 .app{
   background-color: #FAFAFA;
+  flex: 1;
 }
 
 .app__header{

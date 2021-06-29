@@ -119,41 +119,41 @@ function Post( { postId,user, username, caption, imageUrl } ) {
             </div>
 
             <img className="post__image" src={ imageUrl } alt="" />
-            <div className="post__likes">
+            { user && <div className="post__likes">
                 <div className="post__likes__likes">
                     { like ? (
                         <IconButton onClick={ toggleLike }>
                             <FavoriteRoundedIcon style={ { marginLeft: '5px', color: 'red' } } />
                         </IconButton>
                     ) : (
-                        <IconButton onClick={ toggleLike}>
-                            <FavoriteBorderRoundedIcon  style={ { marginLeft: '5px' } } />
+                        <IconButton onClick={ toggleLike }>
+                            <FavoriteBorderRoundedIcon style={ { marginLeft: '5px' } } />
                         </IconButton>
                     )
 
                     }
-                    <strong>{ likes.length}</strong>
+                    <strong>{ likes.length }</strong>
                 </div>
                 <div className="post__likes__comments">
-                {
-                    commentVisible ? (
-                        <IconButton onClick={ toggleComment } >
-                            <ChatBubbleRoundedIcon />
-                        </IconButton>
+                    {
+                        commentVisible ? (
+                            <IconButton onClick={ toggleComment } >
+                                <ChatBubbleRoundedIcon />
+                            </IconButton>
 
 
-                    ) : (
-                        <IconButton onClick={ toggleComment } >
-                            <ChatBubbleOutlineRoundedIcon />
-                        </IconButton>
-                    )
+                        ) : (
+                            <IconButton onClick={ toggleComment } >
+                                <ChatBubbleOutlineRoundedIcon />
+                            </IconButton>
+                        )
                     }
-                    <strong>{ comments.length}</strong>
+                    <strong>{ comments.length }</strong>
 
                 </div>
 
 
-            </div>
+            </div>}
 
             <h4 className="post__text"><strong>{ username }</strong> { caption }</h4>
             { (commentVisible ) ? (
