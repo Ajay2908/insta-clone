@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
+Deployed version of app is now available on [insta-clone](https://instagram-clone-cbada.web.app)
 
 ## Available Scripts
 
