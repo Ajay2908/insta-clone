@@ -2,12 +2,13 @@
 import firebase from 'firebase'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCAHYunNZ9lWYn_xxcyKLYHic7naigYIzU",
-    authDomain: "instagram-clone-cbada.firebaseapp.com",
-    projectId: "instagram-clone-cbada",
-    storageBucket: "instagram-clone-cbada.appspot.com",
-    messagingSenderId: "760366423543",
-    appId: "1:760366423543:web:481c51f58ee5708634e2f2"
+    apiKey: "AIzaSyDw7MxgJBngqdqhu2vsqxmi4o-SqshtPdI",
+    authDomain: "insta-check-d4345.firebaseapp.com",
+    projectId: "insta-check-d4345",
+    storageBucket: "insta-check-d4345.appspot.com",
+    messagingSenderId: "599574950740",
+    appId: "1:599574950740:web:3bb30bafdbdde8f1030ec1",
+    measurementId: "G-01Z2S0YFCJ"
 };
 
 

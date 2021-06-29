@@ -3,6 +3,8 @@ import './App.css';
 import Post from './Post';
 import { db, auth } from './fireBase';
 import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar'
+
 import Modal from '@material-ui/core/Modal';
 import { Button, Input } from '@material-ui/core';
 import Upload from './ImageUpload'
@@ -41,7 +43,6 @@ function App() {
   useEffect( () => {
     const unsubscribe = auth.onAuthStateChanged( ( authUser ) => {
       if ( authUser ) {
-        // console.log( authUser )
         setUser( authUser );
         if ( authUser.displayName ) {
 
@@ -175,12 +176,17 @@ function App() {
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
         />
         { user ? (
-          <div className="login__container">
-            <Button onClick={ () => auth.signOut() } >Logout</Button>
+          <div className="navbar__container">
+            <Avatar className="post__avatar"
+              alt={ username }
+              src="/" />
+            <h4 className="display__name">{ user.displayName }</h4>
+            
+            <Button className="logout__container" onClick={ () => auth.signOut() } >Logout</Button>
           </div>
         ) :
           (
-            <div className="login__container">
+            <div className="navbar__container">
               <Button onClick={ () => setOpen( true ) } className="login__container__signup" >Sign Up</Button>
               <Button onClick={ () => setOpenSignIn( true ) } >Sign In</Button>
             </div>
