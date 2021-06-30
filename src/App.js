@@ -175,7 +175,6 @@ function App() {
         <img className="app__headerImage" alt=""
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
         />
-        { user ? <></>: <h4 style={ { lineHeight: '2em' } }>Please sign in to like, comment and post</h4>}
         { user ? (
           <div className="navbar__container">
             <Avatar className="post__avatar"
@@ -208,7 +207,7 @@ function App() {
       }
       { user?.displayName ?
         (<Upload username={ user.displayName } />) :
-        (<></>)
+        (<><h4 style={{padding:'20px',textAlign:'center'}}>Sorry you have to signin to like,comment and post</h4></>)
       }
       
       
